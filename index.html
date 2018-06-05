@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="screen-orientation" content="portrait">
+  <title>高考小测试</title>
+  <style>
+    [data-dpr="1"] body {
+      max-width: 540px;
+    }
+
+    /* [data-dpr="1"] body {
+      max-width: 480px
+    }
+
+    [data-dpr="2"] body {
+      max-width: 560px
+    }
+
+    [data-dpr="3"] body {
+      max-width: 560px
+    } */
+
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <script>
+    (function rotate() {
+      var orientation = window.orientation;
+      if (orientation == 90 || orientation == -90) {
+        document.body.style.display = 'none';
+        alert("请使用竖屏访问！");
+      }
+      window.onorientationchange = function () {
+        document.body.style.display = "block";
+        rotate();
+      };
+    })()
+
+  </script>
+</body>
+
+</html>
